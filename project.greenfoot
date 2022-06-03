@@ -1,5 +1,6 @@
 #Greenfoot project file
 class.Castle.image=castle.png
+class.MyWorld.image=brick.jpg
 editor.fx.0.height=737
 editor.fx.0.width=814
 editor.fx.0.x=360

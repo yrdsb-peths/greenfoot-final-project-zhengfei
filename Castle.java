@@ -3,8 +3,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * Write a description of class Castle here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @Zhengfei Zhang
+ * @June 3 2022
  */
 public class Castle extends Actor
 {
