@@ -1,15 +1,15 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Castle here.
+ * Write a description of class Mumu here.
  * 
- * @Zhengfei Zhang
- * @June 3 2022
+ * @author (your name) 
+ * @version (a version number or a date)
  */
-public class Castle extends Actor
+public class Mumu extends Actor
 {
     /**
-     * Act - do whatever the Castle wants to do. This method is called whenever
+     * Act - do whatever the Mumu wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act()
