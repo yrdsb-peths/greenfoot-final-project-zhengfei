@@ -1,10 +1,10 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Miku here.
+ * Miku, our hero.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Zhengfei Zhang 
+ * @version June 8 2022
  */
 public class Miku extends Actor
 {
