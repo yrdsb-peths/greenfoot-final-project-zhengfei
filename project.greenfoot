@@ -1,12 +1,15 @@
 #Greenfoot project file
 class.Miku.image=Miku.png
-class.MyWorld.image=brick.jpg
+class.MyWorld.image=Background.jpg
+dependency1.from=MyWorld
+dependency1.to=Miku
+dependency1.type=UsesDependency
 editor.fx.0.height=830
 editor.fx.0.width=796
 editor.fx.0.x=-16
 editor.fx.0.y=0
 height=830
-package.numDependencies=0
+package.numDependencies=1
 package.numTargets=2
 project.charset=windows-1252
 publish.hasSource=false
