@@ -2,6 +2,8 @@
 comment0.target=Miku
 comment0.text=\r\n\ Miku,\ our\ hero.\r\n\ \r\n\ @author\ Zhengfei\ Zhang\ \r\n\ @version\ June\ 8\ 2022\r\n
 comment1.params=
-comment1.target=void\ act()
-comment1.text=\r\n\ Act\ -\ do\ whatever\ the\ Miku\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
-numComments=2
+comment1.target=Miku()
+comment1.text=\r\n\ Constructor\:\ Runs\ everytime\ when\ an\ object\ is\ created.\r\n
+comment2.params=
+comment2.target=void\ act()
+numComments=3
