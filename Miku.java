@@ -32,9 +32,34 @@ public class Miku extends Actor
         setImage(image[0]);
     }
     
+    int imageIndex = 0;
+    public void animationMiku()
+    {
+        if(Greenfoot.isKeyDown("left"))
+        {
+            setImage(image[imageIndex]);
+            imageIndex = (imageIndex + 1) % image.length;
+        }
+        else if(Greenfoot.isKeyDown("right"))
+        {
+            setImage(image[imageIndex]);
+            imageIndex = (imageIndex + 1) % image.length;
+        }
+        else if(Greenfoot.isKeyDown("up"))
+        {
+            setImage(image[imageIndex]);
+            imageIndex = (imageIndex + 1) % image.length;
+        }
+        else if(Greenfoot.isKeyDown("down"))
+        {
+            setImage(image[imageIndex]);
+            imageIndex = (imageIndex + 1) % image.length;
+        }
+    }
+    
     public void act()
     {
         // Add your action code here.
-        
+        animationMiku();
     }
 }
