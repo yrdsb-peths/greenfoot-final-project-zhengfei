@@ -24,7 +24,12 @@ public class TitleScreen extends World
     public void act()
     {
         // Add your action code here.
-        
+        // Start the game if the user presses the space bar.
+        if(Greenfoot.isKeyDown("space"))
+        {
+            MyWorld world = new MyWorld();
+            Greenfoot.setWorld(world);
+        }
         //plays the background song.
         backgroundSound.play();
     }
