@@ -8,6 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class TitleScreen extends World
 {
+    GreenfootSound backgroundSound = new GreenfootSound("World_is_Mine-Hatsune_Miku.mp3");
 
     /**
      * Constructor for objects of class TitleScreen.
@@ -17,5 +18,13 @@ public class TitleScreen extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 400, 1); 
+    }
+    
+    public void act()
+    {
+        // Add your action code here.
+        
+        //plays the background song.
+        backgroundSound.play();
     }
 }
