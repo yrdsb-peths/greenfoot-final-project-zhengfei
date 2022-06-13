@@ -3,5 +3,4 @@ comment0.target=Key
 comment0.text=\r\n\ The\ keys\ for\ the\ user\ to\ press.\r\n\ \r\n\ @author\ Zhengfei\ Zhang\r\n\ @version\ June\ 8\ 2022\r\n
 comment1.params=
 comment1.target=void\ act()
-comment1.text=\r\n\ Act\ -\ do\ whatever\ the\ Key\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
 numComments=2
