@@ -12,7 +12,6 @@ public class TitleScreen extends World
 
     /**
      * Constructor for objects of class TitleScreen.
-     * 
      */
     public TitleScreen()
     {    
@@ -43,6 +42,9 @@ public class TitleScreen extends World
     {
         Label label = new Label("Press <space> to Start", 40);
         addObject(label,285,274);
-        label.setLocation(500,350);
+        label.setLocation(500,600);
+        Label title = new Label("HatsumeVoid", 100);
+        addObject(title,285,274);
+        title.setLocation(500,350);
     }
 }
