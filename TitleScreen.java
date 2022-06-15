@@ -17,7 +17,8 @@ public class TitleScreen extends World
     public TitleScreen()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(1000, 700, 1); 
+        super(1000, 700, 1);
+        prepare();
     }
     
     // Background music is played when user hits run.
@@ -32,5 +33,16 @@ public class TitleScreen extends World
         }
         //plays the background song.
         backgroundSound.play();
+    }
+    
+    /**
+     * Prepare the world for the start of the program.
+     * That is: create the initial objects and add them to the world.
+     */
+    private void prepare()
+    {
+        Label label = new Label("Press <space> to Start", 40);
+        addObject(label,285,274);
+        label.setLocation(500,350);
     }
 }
