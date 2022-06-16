@@ -8,8 +8,12 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class keys extends Actor
 {
-    GreenfootImage[] image;
+    GreenfootImage[] upImage;
+    GreenfootImage[] downImage;
+    GreenfootImage[] rightImage;
+    GreenfootImage[] leftImage;
     int speed = 1;
+    int random = Greenfoot.getRandomNumber(6);
     /**
      * Constructor: Runs everytime when an object is created.
      */
@@ -20,29 +24,18 @@ public class keys extends Actor
         {
             upImage[i] = new GreenfootImage("Images/keys/upKeys/key" + i + ".png");
             upImage[i].scale(200, 150);
-        }
-        
-        downImage = new GreenfootImage[6];
-        for(int i = 0; i < downImage.length; i++)
-        {
             downImage[i] = new GreenfootImage("Images/keys/downKeys/key" + i + ".png");
             downImage[i].scale(200, 150);
-        }
-        
-        rightImage = new GreenfootImage[6];
-        for(int i = 0; i < rightImage.length; i++)
-        {
             rightImage[i] = new GreenfootImage("Images/keys/rightKeys/key" + i + ".png");
             rightImage[i].scale(200, 150);
-        }
-        
-        leftImage = new GreenfootImage[6];
-        for(int i = 0; i < leftImage.length; i++)
-        {
             leftImage[i] = new GreenfootImage("Images/keys/leftKeys/key" + i + ".png");
             leftImage[i].scale(200, 150);
         }
+        
+        //Initialize the key to a random image.
+        setImage("Images/keys/upKeys/key" + random + ".png");
     }
+    
     /**
      * Act - do whatever the Key wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -50,7 +43,7 @@ public class keys extends Actor
     public void act()
     {
         // Add your action code here.
-        
+        MyWorld world = (MyWorld) getWorld();
         // Key falls down.
         int x = getX();
         int y = getY() + speed;
