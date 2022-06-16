@@ -1,8 +1,8 @@
 #BlueJ class context
-comment0.target=Miku
-comment0.text=\r\n\ Miku,\ our\ hero.\r\n\ \r\n\ @author\ Zhengfei\ Zhang\ \r\n\ @version\ June\ 8\ 2022\r\n
+comment0.target=MikuLeft
+comment0.text=\r\n\ Miku,\ our\ hero\ that's\ responsible\ for\ the\ down\ arrows.\r\n\ \r\n\ @author\ Zhengfei\ Zhang\ \r\n\ @version\ June\ 8\ 2022\r\n
 comment1.params=
-comment1.target=Miku()
+comment1.target=MikuLeft()
 comment1.text=\r\n\ Constructor\:\ Runs\ everytime\ when\ an\ object\ is\ created.\r\n
 comment2.params=
 comment2.target=void\ animationMiku()

@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=MikuUp
+comment0.text=\r\n\ Miku,\ our\ hero\ that's\ responsible\ for\ the\ up\ arrows.\r\n\ \r\n\ @author\ Zhengfei\ Zhang\ \r\n\ @version\ June\ 8\ 2022\r\n
+comment1.params=
+comment1.target=MikuUp()
+comment1.text=\r\n\ Constructor\:\ Runs\ everytime\ when\ an\ object\ is\ created.\r\n
+comment2.params=
+comment2.target=void\ animationMiku()
+comment2.text=\r\n\ Miku\ will\ move\ evertime\ when\ left,\ right,\ up\ or\ down\ is\ pressed.\r\n
+comment3.params=
+comment3.target=void\ act()
+comment3.text=\r\n\ Act\ -\ do\ whatever\ the\ Miku\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
+comment4.params=
+comment4.target=void\ spawnKey()
+comment4.text=\r\n\ Miku\ touches\ the\ key\ and\ creates\ new\ key\r\n
+numComments=5

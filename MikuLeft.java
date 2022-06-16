@@ -1,28 +1,28 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Miku, our hero.
+ * Miku, our hero that's responsible for the down arrows.
  * 
  * @author Zhengfei Zhang 
  * @version June 8 2022
  */
-public class Miku extends Actor
+public class MikuLeft extends Actor
 {
-    GreenfootImage[] image;
+    GreenfootImage[] mikuLeft;
     /**
      * Constructor: Runs everytime when an object is created.
      */
-    public Miku()
+    public MikuLeft()
     {
-        image = new GreenfootImage[15];
-        for(int i = 0; i < image.length; i++)
+        mikuLeft = new GreenfootImage[15];
+        for(int i = 0; i < mikuLeft.length; i++)
         {
-            image[i] = new GreenfootImage("Images/AnimateMiku/AnimateMiku" + i + ".png");
-            image[i].scale(200, 150);
+            mikuLeft[i] = new GreenfootImage("Images/AnimateMiku/AnimateMiku" + i + ".png");
+            mikuLeft[i].scale(200, 100);
         }
         
         // Initial Miku image.
-        setImage(image[0]);
+        setImage(mikuLeft[0]);
     }
     
     int imageIndex = 0;
@@ -33,23 +33,8 @@ public class Miku extends Actor
     {
         if(Greenfoot.isKeyDown("left"))
         {
-            setImage(image[imageIndex]);
-            imageIndex = (imageIndex + 1) % image.length;
-        }
-        else if(Greenfoot.isKeyDown("right"))
-        {
-            setImage(image[imageIndex]);
-            imageIndex = (imageIndex + 1) % image.length;
-        }
-        else if(Greenfoot.isKeyDown("up"))
-        {
-            setImage(image[imageIndex]);
-            imageIndex = (imageIndex + 1) % image.length;
-        }
-        else if(Greenfoot.isKeyDown("down"))
-        {
-            setImage(image[imageIndex]);
-            imageIndex = (imageIndex + 1) % image.length;
+            setImage(mikuLeft[imageIndex]);
+            imageIndex = (imageIndex + 1) % mikuLeft.length;
         }
     }
     

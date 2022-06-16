@@ -20,8 +20,14 @@ public class MyWorld extends World
         super(1000, 700, 1, false); 
 
         // Creates the miku object.
-        Miku miku = new Miku();
-        addObject(miku, 500, 350);
+        MikuUp mikuUp = new MikuUp();
+        addObject(mikuUp, 150, 600);
+        MikuDown mikuDown = new MikuDown();
+        addObject(mikuDown, 380, 600);
+        MikuLeft mikuLeft = new MikuLeft();
+        addObject(mikuLeft, 615, 600);
+        MikuRight mikuRight = new MikuRight();
+        addObject(mikuRight, 850, 600);
         // Play the music in a loop.
         easyMusic.playLoop();
         createKeys();
