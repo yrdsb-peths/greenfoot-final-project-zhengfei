@@ -13,7 +13,7 @@ public class Keys extends Actor
     GreenfootImage[] rightImage;
     GreenfootImage[] leftImage;
     int speed = 1;
-    int random = Greenfoot.getRandomNumber(6);
+    int random = Greenfoot.getRandomNumber(4);
     /**
      * Constructor: Runs everytime when an object is created.
      */

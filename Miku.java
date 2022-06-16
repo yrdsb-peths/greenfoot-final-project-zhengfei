@@ -61,5 +61,19 @@ public class Miku extends Actor
     {
         // Add your action code here.
         animationMiku();
+        spawnKey();
+    }
+    
+    /**
+     * Miku touches the key and creates new key
+     */
+    public void spawnKey()
+    {
+        if(isTouching(Keys.class))
+        {
+            removeTouching(Keys.class);
+            MyWorld world = (MyWorld) getWorld();
+            world.createKeys();
+        }
     }
 }
