@@ -20,6 +20,9 @@ public class Keys extends Actor
     public Keys()
     {
         upImage = new GreenfootImage[6];
+        downImage = new GreenfootImage[6];
+        leftImage = new GreenfootImage[6];
+        rightImage = new GreenfootImage[6];
         for(int i = 0; i < upImage.length; i++)
         {
             upImage[i] = new GreenfootImage("Images/keys/upKeys/key" + i + ".png");

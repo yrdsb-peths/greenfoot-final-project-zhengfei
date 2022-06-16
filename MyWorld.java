@@ -24,7 +24,7 @@ public class MyWorld extends World
         addObject(miku, 500, 350);
         // Play the music in a loop.
         easyMusic.playLoop();
-        
+        createKeys();
     }
     
     /**
@@ -34,8 +34,8 @@ public class MyWorld extends World
     {     
         Keys keys = new Keys();
         keys.setSpeed(level);
-        int x = Greenfoot.getRandomNumber(600);
-        int y = 0;
+        int x = 20;
+        int y = 350;
         addObject(keys, x, y);
     }
 }
