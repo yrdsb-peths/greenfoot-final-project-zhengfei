@@ -9,7 +9,6 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class TitleScreen extends World
 {
     GreenfootSound backgroundSound = new GreenfootSound("World_is_Mine-Hatsune_Miku.mp3");
-
     /**
      * Constructor for objects of class TitleScreen.
      */
@@ -49,5 +48,8 @@ public class TitleScreen extends World
         Label title = new Label("HatsuneLoid", 100);
         addObject(title,285,274);
         title.setLocation(500,350);
+        Label smallTitle = new Label("Miku", 60);
+        addObject(smallTitle,285,274);
+        smallTitle.setLocation(730,425);
     }
 }
