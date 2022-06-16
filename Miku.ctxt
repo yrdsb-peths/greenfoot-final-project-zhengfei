@@ -9,4 +9,5 @@ comment2.target=void\ animationMiku()
 comment2.text=\r\n\ Miku\ will\ move\ evertime\ when\ left,\ right,\ up\ or\ down\ is\ pressed.\r\n
 comment3.params=
 comment3.target=void\ act()
+comment3.text=\r\n\ Act\ -\ do\ whatever\ the\ Miku\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
 numComments=4
