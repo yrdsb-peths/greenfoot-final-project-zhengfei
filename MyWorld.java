@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class MyWorld extends World
 {
-
+    GreenfootSound easyMusic = new GreenfootSound("Nekomimi Switch.mp3");
     /**
      * Constructor for objects of class MyWorld.
      * 
@@ -21,5 +21,6 @@ public class MyWorld extends World
         // Creates the miku object.
         Miku miku = new Miku();
         addObject(miku, 500, 350);
+        easyMusic.playLoop();
     }
 }

@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author Zhengfei Zhang
  * @version June 8 2022
  */
-public class Key extends Actor
+public class keys extends Actor
 {
     /**
      * Act - do whatever the Key wants to do. This method is called whenever

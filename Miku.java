@@ -33,6 +33,9 @@ public class Miku extends Actor
     }
     
     int imageIndex = 0;
+    /**
+     * Miku will move evertime when left, right, up or down is pressed.
+     */
     public void animationMiku()
     {
         if(Greenfoot.isKeyDown("left"))

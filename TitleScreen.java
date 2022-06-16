@@ -20,18 +20,21 @@ public class TitleScreen extends World
         prepare();
     }
     
-    // Background music is played when user hits run.
+    /** 
+     * Background music is played and stops when user hits run.
+     */
     public void act()
     {
         // Add your action code here.
+        //plays the background song.
+        backgroundSound.playLoop();
         // Start the game if the user presses the space bar.
         if(Greenfoot.isKeyDown("space"))
         {
             MyWorld world = new MyWorld();
             Greenfoot.setWorld(world);
+            backgroundSound.stop();
         }
-        //plays the background song.
-        backgroundSound.play();
     }
     
     /**
