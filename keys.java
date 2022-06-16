@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author Zhengfei Zhang
  * @version June 8 2022
  */
-public class keys extends Actor
+public class Keys extends Actor
 {
     GreenfootImage[] upImage;
     GreenfootImage[] downImage;
@@ -17,7 +17,7 @@ public class keys extends Actor
     /**
      * Constructor: Runs everytime when an object is created.
      */
-    public keys()
+    public Keys()
     {
         upImage = new GreenfootImage[6];
         for(int i = 0; i < upImage.length; i++)
@@ -33,7 +33,7 @@ public class keys extends Actor
         }
         
         //Initialize the key to a random image.
-        setImage("Images/keys/upKeys/key" + random + ".png");
+        setImage(upImage[0]);
     }
     
     /**
@@ -44,9 +44,14 @@ public class keys extends Actor
     {
         // Add your action code here.
         MyWorld world = (MyWorld) getWorld();
-        // Key falls down.
-        int x = getX();
-        int y = getY() + speed;
+        // Key move forward.
+        int x = getX() + speed;
+        int y = getY();
         setLocation(x, y);
+    }
+    
+    public void setSpeed(int spd)
+    {
+        speed = spd;
     }
 }

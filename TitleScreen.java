@@ -46,7 +46,7 @@ public class TitleScreen extends World
         Label label = new Label("Press <space> to Start", 40);
         addObject(label,285,274);
         label.setLocation(500,600);
-        Label title = new Label("HatsumeVoid", 100);
+        Label title = new Label("HatsuneLoid", 100);
         addObject(title,285,274);
         title.setLocation(500,350);
     }
