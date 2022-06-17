@@ -16,7 +16,7 @@ public class KeyDown extends Actor
      */
     public KeyDown()
     {
-        keyDown = new GreenfootImage[6];
+        keyDown = new GreenfootImage[4];
         for(int i = 0; i < keyDown.length; i++)
         {
             keyDown[i] = new GreenfootImage("Images/keys/downKeys/key" + i + ".png");

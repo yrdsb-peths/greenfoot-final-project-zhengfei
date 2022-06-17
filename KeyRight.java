@@ -16,7 +16,7 @@ public class KeyRight extends Actor
      */
     public KeyRight()
     {
-        keyRight = new GreenfootImage[6];
+        keyRight = new GreenfootImage[4];
         for(int i = 0; i < keyRight.length; i++)
         {
             keyRight[i] = new GreenfootImage("Images/keys/rightKeys/key" + i + ".png");

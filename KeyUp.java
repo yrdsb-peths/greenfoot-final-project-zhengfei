@@ -16,7 +16,7 @@ public class KeyUp extends Actor
      */
     public KeyUp()
     {
-        keyUp = new GreenfootImage[6];
+        keyUp = new GreenfootImage[4];
         for(int i = 0; i < keyUp.length; i++)
         {
             keyUp[i] = new GreenfootImage("Images/keys/upKeys/key" + i + ".png");
