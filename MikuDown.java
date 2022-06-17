@@ -61,11 +61,11 @@ public class MikuDown extends Actor
             world.createKeyDown();
             if(Greenfoot.isKeyDown("down"))
             {
-                
+                world.increaseScore();
             }
             else
             {
-
+                world.decreaseLives();
             }
         }
     }

@@ -16,8 +16,9 @@ public class MyWorld extends World
     int levelModerate = 1;
     int levelHard = 1;
     Label score;
-    public int trackScore = 0;
-    public int addScore = 0;
+    public static int trackScore = 0;
+    Label lives;
+    public static int trackLives = 5;
     /**
      * Constructor for objects of class MyWorld.
      * 
@@ -41,6 +42,12 @@ public class MyWorld extends World
         createKeyDown();
         createKeyLeft();
         createKeyRight();
+        // Records the score.
+        score = new Label(0, 100);
+        addObject(score, 50, 50);
+        // record the lives left.
+        lives = new Label(5, 100);
+        addObject(lives, 950, 50);
     }
     
     /**
@@ -105,13 +112,17 @@ public class MyWorld extends World
      */
     public void increaseScore()
     {
-        trackScore++;
+        trackScore += 5;
         score.setValue(trackScore);
-        
-        if(trackScore % 5 == 0)
-        {
-            addScore += 5;
-        }
+    }
+    
+    /**
+     * Decrease the lives.
+     */
+    public void decreaseLives()
+    {
+        trackLives --;
+        lives.setValue(trackLives);
     }
     
     /**
@@ -119,6 +130,5 @@ public class MyWorld extends World
      */
     public void randomSpeed()
     {
-        
     }
 }
