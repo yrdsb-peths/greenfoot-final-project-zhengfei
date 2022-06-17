@@ -54,11 +54,11 @@ public class MikuUp extends Actor
      */
     public void spawnKey()
     {
-        if(isTouching(Keys.class))
+        if(isTouching(KeyUp.class))
         {
-            removeTouching(Keys.class);
+            removeTouching(KeyUp.class);
             MyWorld world = (MyWorld) getWorld();
-            world.createKeys();
+            world.createKeyUp();
         }
     }
 }

@@ -54,11 +54,11 @@ public class MikuDown extends Actor
      */
     public void spawnKey()
     {
-        if(isTouching(Keys.class))
+        if(isTouching(KeyDown.class))
         {
-            removeTouching(Keys.class);
+            removeTouching(KeyDown.class);
             MyWorld world = (MyWorld) getWorld();
-            world.createKeys();
+            world.createKeyDown();
         }
     }
 }

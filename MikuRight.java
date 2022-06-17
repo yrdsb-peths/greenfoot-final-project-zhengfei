@@ -54,11 +54,11 @@ public class MikuRight extends Actor
      */
     public void spawnKey()
     {
-        if(isTouching(Keys.class))
+        if(isTouching(KeyRight.class))
         {
-            removeTouching(Keys.class);
+            removeTouching(KeyRight.class);
             MyWorld world = (MyWorld) getWorld();
-            world.createKeys();
+            world.createKeyRight();
         }
     }
 }

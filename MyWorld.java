@@ -30,18 +30,58 @@ public class MyWorld extends World
         addObject(mikuRight, 850, 600);
         // Play the music in a loop.
         easyMusic.playLoop();
-        createKeys();
+        //Create the keys objects.
+        createKeyUp();
+        createKeyDown();
+        createKeyLeft();
+        createKeyRight();
     }
     
     /**
-     * Creates a new key
+     * Creates a new up key
      */
-    public void createKeys()
+    public void createKeyUp()
     {     
-        Keys keys = new Keys();
-        keys.setSpeed(level);
-        int x = 20;
-        int y = 350;
-        addObject(keys, x, y);
+        KeyUp keyUp = new KeyUp();
+        keyUp.setSpeed(level);
+        int x = 150;
+        int y = 100;
+        addObject(keyUp, x, y);
+    }
+    
+    /**
+     * Creates a new down key
+     */
+    public void createKeyDown()
+    {     
+        KeyDown keyDown = new KeyDown();
+        keyDown.setSpeed(level);
+        int x = 380;
+        int y = 100;
+        addObject(keyDown, x, y);
+    }
+    
+    /**
+     * Creates a new left key
+     */
+    public void createKeyLeft()
+    {     
+        KeyLeft keyLeft = new KeyLeft();
+        keyLeft.setSpeed(level);
+        int x = 615;
+        int y = 100;
+        addObject(keyLeft, x, y);
+    }
+    
+    /**
+     * Creates a new right key
+     */
+    public void createKeyRight()
+    {     
+        KeyRight keyRight = new KeyRight();
+        keyRight.setSpeed(level);
+        int x = 850;
+        int y = 100;
+        addObject(keyRight, x, y);
     }
 }

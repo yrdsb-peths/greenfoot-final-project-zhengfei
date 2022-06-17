@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=KeyUp
+comment0.text=\r\n\ The\ up\ keys\ for\ the\ user\ to\ press.\r\n\ \r\n\ @author\ Zhengfei\ Zhang\r\n\ @version\ June\ 8\ 2022\r\n
+comment1.params=
+comment1.target=KeyUp()
+comment1.text=\r\n\ Constructor\:\ Runs\ everytime\ when\ an\ object\ is\ created.\r\n
+comment2.params=
+comment2.target=void\ act()
+comment2.text=\r\n\ Act\ -\ do\ whatever\ the\ Key\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
+comment3.params=spd
+comment3.target=void\ setSpeed(int)
+numComments=4
