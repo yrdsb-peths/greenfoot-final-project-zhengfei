@@ -11,6 +11,7 @@ public class KeyDown extends Actor
     GreenfootImage[] keyDown;
     int speed = 1;
     int random = Greenfoot.getRandomNumber(4);
+
     /**
      * Constructor: Runs everytime when an object is created.
      */
@@ -23,8 +24,8 @@ public class KeyDown extends Actor
             keyDown[i].scale(200, 150);
         }
         
-        //Initialize the key to a random image.
-        setImage(keyDown[0]);
+        //Initialize the key.
+        setImage(keyDown[1]);
     }
     
     /**

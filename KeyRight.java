@@ -23,8 +23,8 @@ public class KeyRight extends Actor
             keyRight[i].scale(200, 150);
         }
         
-        //Initialize the key to a random image.
-        setImage(keyRight[0]);
+        //Initialize the key.
+        setImage(keyRight[2]);
     }
     
     /**

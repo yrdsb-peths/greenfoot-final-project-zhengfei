@@ -23,7 +23,7 @@ public class KeyUp extends Actor
             keyUp[i].scale(200, 150);
         }
         
-        //Initialize the key to a random image.
+        //Initialize the key.
         setImage(keyUp[0]);
     }
     

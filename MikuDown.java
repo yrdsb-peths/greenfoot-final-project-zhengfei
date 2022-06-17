@@ -22,7 +22,7 @@ public class MikuDown extends Actor
         }
         
         // Initial Miku image.
-        setImage(mikuDown[0]);
+        setImage(mikuDown[5]);
     }
     
     int imageIndex = 0;

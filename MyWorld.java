@@ -28,15 +28,22 @@ public class MyWorld extends World
         addObject(mikuLeft, 615, 600);
         MikuRight mikuRight = new MikuRight();
         addObject(mikuRight, 850, 600);
-        // Play the music in a loop.
-        easyMusic.playLoop();
-        //Create the keys objects.
+        // Create the keys objects.
         createKeyUp();
         createKeyDown();
         createKeyLeft();
         createKeyRight();
     }
     
+    /**
+     * Play the first music when game starts.
+     */
+    public void act()
+    {
+        // Play the music in a loop.
+        easyMusic.playLoop();
+    }
+
     /**
      * Creates a new up key
      */
@@ -48,7 +55,7 @@ public class MyWorld extends World
         int y = 100;
         addObject(keyUp, x, y);
     }
-    
+
     /**
      * Creates a new down key
      */
@@ -60,7 +67,7 @@ public class MyWorld extends World
         int y = 100;
         addObject(keyDown, x, y);
     }
-    
+
     /**
      * Creates a new left key
      */
@@ -72,7 +79,7 @@ public class MyWorld extends World
         int y = 100;
         addObject(keyLeft, x, y);
     }
-    
+
     /**
      * Creates a new right key
      */
