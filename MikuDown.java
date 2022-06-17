@@ -50,11 +50,11 @@ public class MikuDown extends Actor
     }
     
     /**
-     * Miku touches the key and creates new key
+     * Miku touches the key and user input the right key to create new key.
      */
     public void spawnKey()
     {
-        if(isTouching(KeyDown.class))
+        if(isTouching(KeyDown.class) && Greenfoot.isKeyDown("down"))
         {
             removeTouching(KeyDown.class);
             MyWorld world = (MyWorld) getWorld();

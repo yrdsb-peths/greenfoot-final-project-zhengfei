@@ -9,7 +9,12 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class MyWorld extends World
 {
     GreenfootSound easyMusic = new GreenfootSound("Nekomimi Switch.mp3");
-    int level = 1;
+    int levelEasyUp = Greenfoot.getRandomNumber(5);
+    int levelEasyDown = Greenfoot.getRandomNumber(5);
+    int levelEasyLeft = Greenfoot.getRandomNumber(5);
+    int levelEasyRight = Greenfoot.getRandomNumber(5);
+    int levelModerate = 1;
+    int levelHard = 1;
     /**
      * Constructor for objects of class MyWorld.
      * 
@@ -50,7 +55,7 @@ public class MyWorld extends World
     public void createKeyUp()
     {     
         KeyUp keyUp = new KeyUp();
-        keyUp.setSpeed(level);
+        keyUp.setSpeed(levelEasyUp);
         int x = 150;
         int y = 100;
         addObject(keyUp, x, y);
@@ -62,7 +67,7 @@ public class MyWorld extends World
     public void createKeyDown()
     {     
         KeyDown keyDown = new KeyDown();
-        keyDown.setSpeed(level);
+        keyDown.setSpeed(levelEasyDown);
         int x = 380;
         int y = 100;
         addObject(keyDown, x, y);
@@ -74,7 +79,7 @@ public class MyWorld extends World
     public void createKeyLeft()
     {     
         KeyLeft keyLeft = new KeyLeft();
-        keyLeft.setSpeed(level);
+        keyLeft.setSpeed(levelEasyLeft);
         int x = 615;
         int y = 100;
         addObject(keyLeft, x, y);
@@ -86,9 +91,17 @@ public class MyWorld extends World
     public void createKeyRight()
     {     
         KeyRight keyRight = new KeyRight();
-        keyRight.setSpeed(level);
+        keyRight.setSpeed(levelEasyRight);
         int x = 850;
         int y = 100;
         addObject(keyRight, x, y);
+    }
+    
+    /**
+     * Set random speed for keys everytime it touches Miku.
+     */
+    public void randomSpeed()
+    {
+        
     }
 }

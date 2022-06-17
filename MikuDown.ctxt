@@ -12,5 +12,5 @@ comment3.target=void\ act()
 comment3.text=\r\n\ Act\ -\ do\ whatever\ the\ Miku\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
 comment4.params=
 comment4.target=void\ spawnKey()
-comment4.text=\r\n\ Miku\ touches\ the\ key\ and\ creates\ new\ key\r\n
+comment4.text=\r\n\ Miku\ touches\ the\ key\ and\ user\ input\ the\ right\ key\ to\ create\ new\ key.\r\n
 numComments=5

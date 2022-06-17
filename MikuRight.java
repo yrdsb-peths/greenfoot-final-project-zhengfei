@@ -54,7 +54,7 @@ public class MikuRight extends Actor
      */
     public void spawnKey()
     {
-        if(isTouching(KeyRight.class))
+        if(isTouching(KeyRight.class) && Greenfoot.isKeyDown("right"))
         {
             removeTouching(KeyRight.class);
             MyWorld world = (MyWorld) getWorld();
