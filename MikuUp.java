@@ -59,6 +59,14 @@ public class MikuUp extends Actor
             removeTouching(KeyUp.class);
             MyWorld world = (MyWorld) getWorld();
             world.createKeyUp();
+            if(Greenfoot.isKeyDown("up"))
+            {
+                world.increaseScore();
+            }
+            else
+            {
+                world.decreaseLives();
+            }
         }
     }
 }

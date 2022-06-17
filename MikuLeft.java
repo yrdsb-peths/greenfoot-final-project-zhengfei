@@ -59,6 +59,14 @@ public class MikuLeft extends Actor
             removeTouching(KeyLeft.class);
             MyWorld world = (MyWorld) getWorld();
             world.createKeyLeft();
+            if(Greenfoot.isKeyDown("left"))
+            {
+                world.increaseScore();
+            }
+            else
+            {
+                world.decreaseLives();
+            }
         }
     }
 }

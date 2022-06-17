@@ -9,12 +9,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class MyWorld extends World
 {
     GreenfootSound easyMusic = new GreenfootSound("Nekomimi Switch.mp3");
-    int levelEasyUp = Greenfoot.getRandomNumber(5);
-    int levelEasyDown = Greenfoot.getRandomNumber(5);
-    int levelEasyLeft = Greenfoot.getRandomNumber(5);
-    int levelEasyRight = Greenfoot.getRandomNumber(5);
-    int levelModerate = 1;
-    int levelHard = 1;
+    int levelEasy = Greenfoot.getRandomNumber(8);
+    int levelModerate = levelEasy+5;
+    int levelHard = levelModerate+5;
     Label score;
     public static int trackScore = 0;
     Label lives;
@@ -44,10 +41,10 @@ public class MyWorld extends World
         createKeyRight();
         // Records the score.
         score = new Label(0, 100);
-        addObject(score, 50, 50);
+        addObject(score, 100, 50);
         // record the lives left.
         lives = new Label(5, 100);
-        addObject(lives, 950, 50);
+        addObject(lives, 900, 50);
     }
     
     /**
@@ -65,9 +62,9 @@ public class MyWorld extends World
     public void createKeyUp()
     {     
         KeyUp keyUp = new KeyUp();
-        keyUp.setSpeed(levelEasyUp);
+        keyUp.setSpeed(levelEasy);
         int x = 150;
-        int y = 100;
+        int y = 155;
         addObject(keyUp, x, y);
     }
 
@@ -77,9 +74,9 @@ public class MyWorld extends World
     public void createKeyDown()
     {     
         KeyDown keyDown = new KeyDown();
-        keyDown.setSpeed(levelEasyDown);
+        keyDown.setSpeed(levelEasy);
         int x = 380;
-        int y = 100;
+        int y = 155;
         addObject(keyDown, x, y);
     }
 
@@ -89,9 +86,9 @@ public class MyWorld extends World
     public void createKeyLeft()
     {     
         KeyLeft keyLeft = new KeyLeft();
-        keyLeft.setSpeed(levelEasyLeft);
+        keyLeft.setSpeed(levelEasy);
         int x = 615;
-        int y = 100;
+        int y = 155;
         addObject(keyLeft, x, y);
     }
 
@@ -101,9 +98,9 @@ public class MyWorld extends World
     public void createKeyRight()
     {     
         KeyRight keyRight = new KeyRight();
-        keyRight.setSpeed(levelEasyRight);
+        keyRight.setSpeed(levelEasy);
         int x = 850;
-        int y = 100;
+        int y = 155;
         addObject(keyRight, x, y);
     }
     
