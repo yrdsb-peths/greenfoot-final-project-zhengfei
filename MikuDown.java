@@ -20,11 +20,11 @@ public class MikuDown extends Actor
             mikuDown[i] = new GreenfootImage("Images/AnimateMiku/AnimateMiku" + i + ".png");
             mikuDown[i].scale(200, 100);
         }
-        
+
         // Initial Miku image.
         setImage(mikuDown[5]);
     }
-    
+
     int imageIndex = 0;
     /**
      * Miku will move evertime when left, right, up or down is pressed.
@@ -37,7 +37,7 @@ public class MikuDown extends Actor
             imageIndex = (imageIndex + 1) % mikuDown.length;
         }
     }
-    
+
     /**
      * Act - do whatever the Miku wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -48,17 +48,25 @@ public class MikuDown extends Actor
         animationMiku();
         spawnKey();
     }
-    
+
     /**
      * Miku touches the key and user input the right key to create new key.
      */
     public void spawnKey()
     {
-        if(isTouching(KeyDown.class) && Greenfoot.isKeyDown("down"))
+        if(isTouching(KeyDown.class))
         {
             removeTouching(KeyDown.class);
             MyWorld world = (MyWorld) getWorld();
             world.createKeyDown();
+            if(Greenfoot.isKeyDown("down"))
+            {
+                
+            }
+            else
+            {
+
+            }
         }
     }
 }

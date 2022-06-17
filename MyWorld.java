@@ -15,6 +15,9 @@ public class MyWorld extends World
     int levelEasyRight = Greenfoot.getRandomNumber(5);
     int levelModerate = 1;
     int levelHard = 1;
+    Label score;
+    public int trackScore = 0;
+    public int addScore = 0;
     /**
      * Constructor for objects of class MyWorld.
      * 
@@ -95,6 +98,20 @@ public class MyWorld extends World
         int x = 850;
         int y = 100;
         addObject(keyRight, x, y);
+    }
+    
+    /**
+     * Increases the score
+     */
+    public void increaseScore()
+    {
+        trackScore++;
+        score.setValue(trackScore);
+        
+        if(trackScore % 5 == 0)
+        {
+            addScore += 5;
+        }
     }
     
     /**
