@@ -23,7 +23,7 @@ public class MyWorld extends World
     Label score;
     public static int trackScore = 0;
     Label lives;
-    public static int trackLives = 5;
+    public static int trackLives = 10;
     /**
      * Constructor for objects of class MyWorld.
      * 
@@ -51,7 +51,7 @@ public class MyWorld extends World
         score = new Label(0, 100);
         addObject(score, 100, 50);
         // record the lives left.
-        lives = new Label(5, 100);
+        lives = new Label(10, 100);
         addObject(lives, 900, 50);
     }
     
