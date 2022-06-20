@@ -9,9 +9,17 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class MyWorld extends World
 {
     GreenfootSound easyMusic = new GreenfootSound("Nekomimi Switch.mp3");
-    int levelEasy = Greenfoot.getRandomNumber(8);
-    int levelModerate = levelEasy+5;
-    int levelHard = levelModerate+5;
+    GreenfootSound moderateMusic = new GreenfootSound("Hatsune Miku sings _Ievan Polkka_.mp3");
+    GreenfootSound hardMusic = new GreenfootSound("Hatsune_Miku_no_Shoushitsu.mp3");
+    int levelEasyUp = Greenfoot.getRandomNumber(5)+1;
+    int levelEasyDown = Greenfoot.getRandomNumber(5)+1;
+    int levelEasyLeft = Greenfoot.getRandomNumber(5)+1;
+    int levelEasyRight = Greenfoot.getRandomNumber(5)+1;
+    int levelModerateUp = levelEasyUp+5;
+    int levelModerateDown = levelEasyDown+5;
+    int levelModerateLeft = levelEasyLeft+5;
+    int levelModerateRight = levelEasyRight+5;
+    int levelHardUp = levelModerateUp+10;
     Label score;
     public static int trackScore = 0;
     Label lives;
@@ -55,6 +63,19 @@ public class MyWorld extends World
         // Play the music in a loop.
         easyMusic.playLoop();
     }
+    
+    /**
+     * Ends the game.
+     */
+    public void gameOver()
+    {
+        Label gameOver = new Label("Game Over", 200);
+        addObject(gameOver, 500, 350);
+        Greenfoot.setWorld(new GameOver());
+        easyMusic.stop();
+        moderateMusic.stop();
+        hardMusic.stop();
+    }
 
     /**
      * Creates a new up key
@@ -62,7 +83,7 @@ public class MyWorld extends World
     public void createKeyUp()
     {     
         KeyUp keyUp = new KeyUp();
-        keyUp.setSpeed(levelEasy);
+        keyUp.setSpeed(levelEasyUp);
         int x = 150;
         int y = 155;
         addObject(keyUp, x, y);
@@ -74,7 +95,7 @@ public class MyWorld extends World
     public void createKeyDown()
     {     
         KeyDown keyDown = new KeyDown();
-        keyDown.setSpeed(levelEasy);
+        keyDown.setSpeed(levelEasyDown);
         int x = 380;
         int y = 155;
         addObject(keyDown, x, y);
@@ -86,7 +107,7 @@ public class MyWorld extends World
     public void createKeyLeft()
     {     
         KeyLeft keyLeft = new KeyLeft();
-        keyLeft.setSpeed(levelEasy);
+        keyLeft.setSpeed(levelEasyLeft);
         int x = 615;
         int y = 155;
         addObject(keyLeft, x, y);
@@ -98,7 +119,7 @@ public class MyWorld extends World
     public void createKeyRight()
     {     
         KeyRight keyRight = new KeyRight();
-        keyRight.setSpeed(levelEasy);
+        keyRight.setSpeed(levelEasyRight);
         int x = 850;
         int y = 155;
         addObject(keyRight, x, y);
@@ -111,6 +132,11 @@ public class MyWorld extends World
     {
         trackScore += 5;
         score.setValue(trackScore);
+        if(trackScore <= 50)
+        {
+            easyMusic.stop();
+            moderateMusic.play();
+        }
     }
     
     /**
@@ -120,6 +146,10 @@ public class MyWorld extends World
     {
         trackLives --;
         lives.setValue(trackLives);
+        if(trackLives <= 0)
+        {
+            gameOver();
+        }
     }
     
     /**
