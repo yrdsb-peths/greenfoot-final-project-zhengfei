@@ -12,9 +12,9 @@ public class MyWorld extends World
     GreenfootSound moderateMusic = new GreenfootSound("Hatsune Miku sings _Ievan Polkka_.mp3");
     GreenfootSound hardMusic = new GreenfootSound("Hatsune_Miku_no_Shoushitsu.mp3");
     int levelEasyUp = Greenfoot.getRandomNumber(4);
-    int levelEasyDown = Greenfoot.getRandomNumber(4);
-    int levelEasyLeft = Greenfoot.getRandomNumber(4);
-    int levelEasyRight = Greenfoot.getRandomNumber(4);
+    int levelEasyDown = Greenfoot.getRandomNumber(6);
+    int levelEasyLeft = Greenfoot.getRandomNumber(2);
+    int levelEasyRight = Greenfoot.getRandomNumber(3);
     int level = 1;
     Label score;
     public int trackScore = 0;
