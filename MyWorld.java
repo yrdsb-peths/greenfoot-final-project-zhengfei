@@ -11,15 +11,11 @@ public class MyWorld extends World
     GreenfootSound easyMusic = new GreenfootSound("Nekomimi Switch.mp3");
     GreenfootSound moderateMusic = new GreenfootSound("Hatsune Miku sings _Ievan Polkka_.mp3");
     GreenfootSound hardMusic = new GreenfootSound("Hatsune_Miku_no_Shoushitsu.mp3");
-    int levelEasyUp = Greenfoot.getRandomNumber(5)+1;
-    int levelEasyDown = Greenfoot.getRandomNumber(5)+1;
-    int levelEasyLeft = Greenfoot.getRandomNumber(5)+1;
-    int levelEasyRight = Greenfoot.getRandomNumber(5)+1;
-    int levelModerateUp = levelEasyUp+5;
-    int levelModerateDown = levelEasyDown+5;
-    int levelModerateLeft = levelEasyLeft+5;
-    int levelModerateRight = levelEasyRight+5;
-    int levelHardUp = levelModerateUp+10;
+    int levelEasyUp = Greenfoot.getRandomNumber(4);
+    int levelEasyDown = Greenfoot.getRandomNumber(4);
+    int levelEasyLeft = Greenfoot.getRandomNumber(4);
+    int levelEasyRight = Greenfoot.getRandomNumber(4);
+    int level = 1;
     Label score;
     public int trackScore = 0;
     Label lives;
@@ -81,7 +77,7 @@ public class MyWorld extends World
     public void createKeyUp()
     {     
         KeyUp keyUp = new KeyUp();
-        keyUp.setSpeed(levelEasyUp);
+        keyUp.setSpeed(levelEasyUp+level);
         int x = 150;
         int y = 155;
         addObject(keyUp, x, y);
@@ -93,7 +89,7 @@ public class MyWorld extends World
     public void createKeyDown()
     {     
         KeyDown keyDown = new KeyDown();
-        keyDown.setSpeed(levelEasyDown);
+        keyDown.setSpeed(levelEasyDown+level);
         int x = 380;
         int y = 155;
         addObject(keyDown, x, y);
@@ -105,7 +101,7 @@ public class MyWorld extends World
     public void createKeyLeft()
     {     
         KeyLeft keyLeft = new KeyLeft();
-        keyLeft.setSpeed(levelEasyLeft);
+        keyLeft.setSpeed(levelEasyLeft+level);
         int x = 615;
         int y = 155;
         addObject(keyLeft, x, y);
@@ -117,28 +113,37 @@ public class MyWorld extends World
     public void createKeyRight()
     {     
         KeyRight keyRight = new KeyRight();
-        keyRight.setSpeed(levelEasyRight);
+        keyRight.setSpeed(levelEasyRight+level);
         int x = 850;
         int y = 155;
         addObject(keyRight, x, y);
     }
     
     /**
-     * Increases the score
+     * Increases the score and adds difficulty for every 100 points
      */
     public void increaseScore()
     {
         trackScore += 5;
         score.setValue(trackScore);
-        if(trackScore <= 50)
+        if(trackScore % 100 == 0)
+        {
+            level += 1;
+        }
+        if(trackScore >= 100)
         {
             easyMusic.stop();
             moderateMusic.play();
         }
+        else if(trackScore >= 200)
+        {
+            moderateMusic.stop();
+            hardMusic.play();
+        }
     }
     
     /**
-     * Decrease the lives.
+     * Decrease the lives and dies when trackLives = 0.
      */
     public void decreaseLives()
     {
@@ -148,12 +153,5 @@ public class MyWorld extends World
         {
             gameOver();
         }
-    }
-    
-    /**
-     * Set random speed for keys everytime it touches Miku.
-     */
-    public void randomSpeed()
-    {
     }
 }
