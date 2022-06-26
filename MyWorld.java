@@ -21,9 +21,9 @@ public class MyWorld extends World
     int levelModerateRight = levelEasyRight+5;
     int levelHardUp = levelModerateUp+10;
     Label score;
-    public static int trackScore = 0;
+    public int trackScore = 0;
     Label lives;
-    public static int trackLives = 10;
+    public int trackLives = 10;
     /**
      * Constructor for objects of class MyWorld.
      * 
@@ -69,8 +69,6 @@ public class MyWorld extends World
      */
     public void gameOver()
     {
-        Label gameOver = new Label("Game Over", 200);
-        addObject(gameOver, 500, 350);
         Greenfoot.setWorld(new GameOver());
         easyMusic.stop();
         moderateMusic.stop();
