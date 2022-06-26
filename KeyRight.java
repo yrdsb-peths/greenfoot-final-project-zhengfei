@@ -4,7 +4,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * The right keys for the user to press.
  * 
  * @author Zhengfei Zhang
- * @version June 8 2022
+ * @version June 26 2022
  */
 public class KeyRight extends Actor
 {
@@ -22,11 +22,11 @@ public class KeyRight extends Actor
             keyRight[i] = new GreenfootImage("Images/keys/rightKeys/key" + i + ".png");
             keyRight[i].scale(200, 150);
         }
-        
+
         //Initialize the key.
         setImage(keyRight[2]);
     }
-    
+
     /**
      * Act - do whatever the Key wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -40,7 +40,7 @@ public class KeyRight extends Actor
         int y = getY() + speed;
         setLocation(x, y);
     }
-    
+
     public void setSpeed(int spd)
     {
         speed = spd;

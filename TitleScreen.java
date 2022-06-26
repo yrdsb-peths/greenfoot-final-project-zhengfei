@@ -4,7 +4,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * Title screen, or the opening screen.
  * 
  * @author Zhengfei Zhang
- * @version June 8 2022
+ * @version June 26 2022
  */
 public class TitleScreen extends World
 {
@@ -18,7 +18,7 @@ public class TitleScreen extends World
         super(1000, 700, 1);
         prepare();
     }
-    
+
     /** 
      * Background music is played and stops when user hits run.
      */
@@ -35,7 +35,7 @@ public class TitleScreen extends World
             backgroundSound.stop();
         }
     }
-    
+
     /**
      * Prepare the world for the start of the program.
      * That is: create the initial objects and add them to the world.

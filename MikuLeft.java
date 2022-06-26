@@ -4,7 +4,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * Miku, our hero that's responsible for the down arrows.
  * 
  * @author Zhengfei Zhang 
- * @version June 8 2022
+ * @version June 26 2022
  */
 public class MikuLeft extends Actor
 {
@@ -20,14 +20,14 @@ public class MikuLeft extends Actor
             mikuLeft[i] = new GreenfootImage("Images/AnimateMiku/AnimateMiku" + i + ".png");
             mikuLeft[i].scale(200, 100);
         }
-        
+
         // Initial Miku image.
         setImage(mikuLeft[9]);
     }
-    
+
     int imageIndex = 0;
     /**
-     * Miku will move evertime when left, right, up or down is pressed.
+     * Miku will move evertime when left key is pressed.
      */
     public void animationMiku()
     {
@@ -37,7 +37,7 @@ public class MikuLeft extends Actor
             imageIndex = (imageIndex + 1) % mikuLeft.length;
         }
     }
-    
+
     /**
      * Act - do whatever the Miku wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -48,9 +48,10 @@ public class MikuLeft extends Actor
         animationMiku();
         spawnKey();
     }
-    
+
     /**
-     * Miku touches the key and creates new key
+     * Miku touches the key and user hits the right key to create a new key and increase score
+     * if key is missed, lives decrease.
      */
     public void spawnKey()
     {

@@ -1,10 +1,10 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Shows screen when the world ended.
+ * Shows screen when the world ended and displays user's points.
  * 
  * @Zhengfei Zhang
- * @June 20 2022
+ * @June 26 2022
  */
 public class GameOver extends World
 {
@@ -22,7 +22,7 @@ public class GameOver extends World
         Label showScore = new Label("Your points: " + MyWorld.score.getValue(), 100);
         addObject(showScore, 500, 470);
     }
-    
+
     /** 
      * Background music is played.
      */

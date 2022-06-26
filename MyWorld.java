@@ -1,10 +1,10 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * The world our hero lives in.
+ * The world our hero, Miku, lives in.
  * 
  * @Zhenfei Zhang
- * @June 6 2022
+ * @June 26 2022
  */
 public class MyWorld extends World
 {
@@ -46,7 +46,7 @@ public class MyWorld extends World
         addObject(lives, 900, 50);
         lives.setValue(trackLives);
     }
-    
+
     /**
      * Play the first music when game starts.
      */
@@ -55,7 +55,7 @@ public class MyWorld extends World
         // Play the music in a loop.
         easyMusic.playLoop();
     }
-    
+
     /**
      * Ends the game.
      */
@@ -114,7 +114,7 @@ public class MyWorld extends World
         int y = 155;
         addObject(keyRight, x, y);
     }
-    
+
     /**
      * Increases the score and adds difficulty for every 100 points
      */
@@ -137,7 +137,7 @@ public class MyWorld extends World
             hardMusic.play();
         }
     }
-    
+
     /**
      * Decrease the lives and dies when trackLives = 0.
      */
