@@ -73,7 +73,7 @@ public class MyWorld extends World
     public void createKeyUp()
     {     
         KeyUp keyUp = new KeyUp();
-        keyUp.setSpeed(Greenfoot.getRandomNumber(4)+level);
+        keyUp.setSpeed(Greenfoot.getRandomNumber(6)+level);
         int x = 150;
         int y = 155;
         addObject(keyUp, x, y);
@@ -97,7 +97,7 @@ public class MyWorld extends World
     public void createKeyLeft()
     {     
         KeyLeft keyLeft = new KeyLeft();
-        keyLeft.setSpeed(Greenfoot.getRandomNumber(4)+level);
+        keyLeft.setSpeed(Greenfoot.getRandomNumber(3)+level);
         int x = 615;
         int y = 155;
         addObject(keyLeft, x, y);
@@ -109,7 +109,7 @@ public class MyWorld extends World
     public void createKeyRight()
     {     
         KeyRight keyRight = new KeyRight();
-        keyRight.setSpeed(Greenfoot.getRandomNumber(4)+level);
+        keyRight.setSpeed(Greenfoot.getRandomNumber(5)+level);
         int x = 850;
         int y = 155;
         addObject(keyRight, x, y);
