@@ -51,7 +51,7 @@ public class TitleScreen extends World
         Label smallTitle = new Label("Miku", 60);
         addObject(smallTitle,285,274);
         smallTitle.setLocation(730,425);
-        Label instruction = new Label("Press the arrows when touch Miku, you have 10 lives", 40);
+        Label instruction = new Label("Press the right arrow keys when touch Miku, you have 10 lives", 40);
         addObject(instruction,285,274);
         instruction.setLocation(500, 500);
     }

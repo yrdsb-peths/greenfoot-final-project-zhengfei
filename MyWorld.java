@@ -12,9 +12,9 @@ public class MyWorld extends World
     GreenfootSound moderateMusic = new GreenfootSound("Hatsune Miku sings _Ievan Polkka_.mp3");
     GreenfootSound hardMusic = new GreenfootSound("Hatsune_Miku_no_Shoushitsu.mp3");
     int level = 1;
-    Label score;
+    static Counter score = new Counter("Score: ");
     public int trackScore = 0;
-    Label lives;
+    Counter lives = new Counter("Lives: ");
     public int trackLives = 10;
     /**
      * Constructor for objects of class MyWorld.
@@ -40,11 +40,11 @@ public class MyWorld extends World
         createKeyLeft();
         createKeyRight();
         // Records the score.
-        score = new Label(0, 100);
         addObject(score, 100, 50);
+        score.setValue(trackScore);
         // record the lives left.
-        lives = new Label(10, 100);
         addObject(lives, 900, 50);
+        lives.setValue(trackLives);
     }
     
     /**
@@ -85,7 +85,7 @@ public class MyWorld extends World
     public void createKeyDown()
     {     
         KeyDown keyDown = new KeyDown();
-        keyDown.setSpeed(Greenfoot.getRandomNumber(6)+level);
+        keyDown.setSpeed(Greenfoot.getRandomNumber(4)+level);
         int x = 380;
         int y = 155;
         addObject(keyDown, x, y);
@@ -97,7 +97,7 @@ public class MyWorld extends World
     public void createKeyLeft()
     {     
         KeyLeft keyLeft = new KeyLeft();
-        keyLeft.setSpeed(Greenfoot.getRandomNumber(3)+level);
+        keyLeft.setSpeed(Greenfoot.getRandomNumber(4)+level);
         int x = 615;
         int y = 155;
         addObject(keyLeft, x, y);
@@ -109,7 +109,7 @@ public class MyWorld extends World
     public void createKeyRight()
     {     
         KeyRight keyRight = new KeyRight();
-        keyRight.setSpeed(Greenfoot.getRandomNumber(5)+level);
+        keyRight.setSpeed(Greenfoot.getRandomNumber(4)+level);
         int x = 850;
         int y = 155;
         addObject(keyRight, x, y);

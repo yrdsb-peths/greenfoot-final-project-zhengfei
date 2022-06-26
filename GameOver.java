@@ -19,6 +19,8 @@ public class GameOver extends World
         super(1000, 700, 1);
         Label gameOver = new Label("Game Over", 200);
         addObject(gameOver, 500, 350);
+        Label showScore = new Label("Your points: " + MyWorld.score.getValue(), 100);
+        addObject(showScore, 500, 470);
     }
     
     /** 
